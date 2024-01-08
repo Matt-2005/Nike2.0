@@ -1,0 +1,959 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+/*-------------------------------------*/
+
+.burger {
+    bottom: 0;
+    margin-right: 30px;
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    display: none;
+}
+
+.bar {
+    background: black;
+    height: 8px;
+    border-radius: 50px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform-origin: 0 0;
+    transition: all 500ms;
+    width: 100%;
+}
+
+.bun-top {
+    transform: translate3d(0, 0, 0);
+}
+
+.lettuce {
+    transform: translate3d(0, -25px, 0) scaleY(0);
+    opacity: 0;
+}
+
+.mustard {
+    transform: translate3d(-75px, 0, 0) scaleY(0);
+    opacity: 0;
+}
+
+.ketchup {
+    transform: translate3d(75px, 0, 0) scaleY(0);
+    opacity: 0;
+}
+
+.patty {
+    transform: translate3d(0, 15px, 0);
+}
+
+.bun-bot {
+    transform: translate3d(0, 30px, 0);
+}
+
+.on .bar {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+
+.on .bun-top {
+    background: #d7b48a;
+    transform: translate3d(0, 0, 0) scaleY(1.5);
+}
+
+.on .lettuce {
+    background: #62c852;
+    transform: translate3d(0, 20px, 0) scaleY(0.5);
+    opacity: 1;
+    transition-delay: 200ms;
+}
+
+.on .mustard {
+    background: #e5e360;
+    transform: translate3d(0, 30px, 0) scaleY(0.5);
+    opacity: 1;
+    transition-delay: 400ms;
+}
+
+.on .ketchup {
+    background: #ce4a4a;
+    transform: translate3d(0, 40px, 0) scaleY(0.5);
+    opacity: 1;
+    transition-delay: 600ms;
+}
+
+.on .patty {
+    background: #3d362a;
+    transform: translate3d(0, 50px, 0) scaleY(1);
+}
+
+.on .bun-bot {
+    background: #d7b48a;
+    transform: translate3d(0, 65px, 0) scaleY(1.5);
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100px;
+    /* Aligne le haut du menu avec le bouton burger */
+    right: 10px;
+    /* Place le menu à gauche du bouton burger */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+
+.menu-dropdown a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.menu-dropdown a:hover {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.603);
+    font-weight: 500;
+}
+
+/*-------------------------------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.navbar1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.navbar2 {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-left: 10em;
+}
+
+.navbar2 a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+.navbar2 a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1.5em
+}
+
+.navbar3,
+.navbar4 {
+    display: block;
+    align-items: center;
+    padding: 5px;
+}
+
+.navbar3 a {
+    padding: 15px;
+}
+
+.navbar3 input {
+    padding: 10px 20px;
+}
+
+.navbar3 input {
+    border-radius: 50px;
+    border-style: none;
+    background-color: rgba(128, 128, 128, 0.126);
+}
+
+.navbar3 input:focus {
+    outline: none;
+}
+
+.navbar3 input:hover {
+    background-color: rgba(128, 128, 128, 0.484);
+}
+
+/*-------------------------------------*/
+.hautdepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 40px;
+}
+
+.hautdepage .jordanacceuil {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px;
+}
+
+.navjordan {
+    display: block;
+}
+
+.hautdepage .jordan {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.hautdepage a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+.navjordan a:hover {
+    color: rgba(0, 0, 0, 0.712);
+}
+
+/*-------------------------------------*/
+.videoprincipale {
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.videoprincipale .video1 {
+    display: block;
+}
+
+.videoprincipale .video2 {
+    display: none;
+}
+
+/*-------------------------------------*/
+.text1,
+.text2,
+.text3,
+.text4,
+.text5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.text1 p:first-child,
+.text2 p:first-child,
+.text3 p:first-child,
+.text4 p:first-child,
+.text5 p:first-child {
+    padding-bottom: 40px;
+    font-size: 15px;
+}
+
+.text1 h3,
+.text2 h3,
+.text3 h3,
+.text4 h3,
+.text5 h3 {
+    font-size: 40px;
+}
+
+.text1 .grostext,
+.text2 .grostext,
+.text3 .grostext,
+.text4 .grostext,
+.text5 .grostext {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    width: 45%;
+    font-size: 17px;
+    text-align: center;
+}
+
+.text1 a,
+.text2 a,
+.text3 a,
+.text4 a,
+.text5 a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.text1 a:hover,
+.text2 a:hover,
+.text3 a:hover,
+.text4 a:hover,
+.text5 a:hover {
+    background-color: rgba(0, 0, 0, 0.822);
+}
+
+/*-------------------------------------*/
+.tendancedumoment h2,
+.jordanwomen h2,
+.jordanmen h2,
+.jordankids h2 {
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+.tendancedumoment .tendanceimg,
+.jordanwomen .jordanwomenimg,
+.jordanmen .jordanmenimg,
+.jordankids .jordankidsimg {
+    padding: 40px;
+    display: block;
+}
+
+.tendancedumoment .tendanceresponsif,
+.jordanwomen .jordanwomenresponsif,
+.jordanmen .jordanmenresponsif,
+.jordankids .jordankidsresponsif {
+    padding: 40px;
+    display: none;
+}
+
+/*-------------------------------------*/
+.plusdarticlejordan h3 {
+    font-weight: bolder;
+    padding-left: 40px;
+    font-size: 30px;
+}
+
+.basdepage {
+    padding: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/*-------------------------------------*/
+.containertext {
+    display: flex;
+    padding: 40px 40px;
+}
+
+.conttext {
+    display: flex;
+    text-align: justify;
+    justify-content: left;
+    width: 30%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 50px;
+    padding-left: 100px;
+}
+
+.containerautre {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 50px;
+}
+
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+}
+
+.mvente {
+    color: rgb(201, 138, 22);
+    font-weight: 500;
+}
+
+.nomchaussure {
+    font-weight: bold;
+}
+
+.prix {
+    font-weight: bold;
+}
+
+/*-------------------------------------*/
+/*-------------------------------------*/
+/*-------------------------------------*/
+/*-------------------------------------*/
+
+
+.fondproduit {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbarnouv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.conteneurprixgeneral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.conteneurimg {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+}
+
+.star {
+    font-size: 30px;
+    color: gold;
+}
+
+.rating {
+    padding: 10px;
+}
+
+.conteneurprix {
+    width: 50%;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.prixxx {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.chaussure {
+    font-size: 4.5em;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.3em;
+    padding-bottom: 20px;
+}
+
+.slider-container {
+    width: 60%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.sliderdiv {
+    width: 50%;
+}
+
+.slider {
+    display: flex;
+    animation: slide 8s linear infinite;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+/*----------------------*/
+form {
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+form h1 {
+    font-size: 20px;
+}
+
+form .separation {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+form .corps-formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+form .corps-formulaire .groupe {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form .corps-formulaire .gauche .groupe input {
+    margin-top: 5px;
+    padding: 10px 5px 10px 30px;
+    border: 1px solid #c9c9c9;
+    outline-color: #747cdf;
+    border-radius: 5px;
+}
+
+form .corps-formulaire .gauche .groupe i {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    padding: 9px 8px;
+    color: #747cdf;
+}
+
+form .corps-formulaire .droite {
+    margin-left: 40px;
+}
+
+form .corps-formulaire .droite .groupe {
+    height: 100%;
+}
+
+form .corps-formulaire .droite .groupe textarea {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+    height: 72%;
+}
+
+form .pied-formulaire button {
+    margin-top: 10px;
+    background-color: gray;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form .pied-formulaire button:hover {
+    margin-top: 10px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*-------------------------*/
+.maps {
+    justify-content: center;
+    text-align: center;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+
+
+.boutonacheter {
+    border-style: none;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.boutonacheter:hover {
+    border-style: none;
+    background-color: rgba(255, 255, 255, 0.253);
+    color: black;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.paniergeneral {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.infopanier {
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.infopanier p:first-child {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.infopanier ul li {
+    list-style: none;
+}
+
+.ligne {
+    border: solid black 1px;
+}
+
+.prixpanier {
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 150px;
+}
+
+.prixpanier .prixborder {
+    width: 70%;
+    border: solid 1px black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prixpanier .prixborder button {
+    border-style: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(167, 166, 166, 0.653);
+}
+
+.prixpanier .prixborder button:hover {
+    border-style: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.411);
+}
+
+@keyframes slide {
+
+    0%,
+    20% {
+        transform: translateX(0%);
+    }
+
+    25%,
+    45% {
+        transform: translateX(-100%);
+    }
+
+    50%,
+    70% {
+        transform: translateX(-200%);
+    }
+
+    75%,
+    95% {
+        transform: translateX(-300%);
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .text1,
+    .text2,
+    .text3,
+    .text4,
+    .text5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .text1 h3,
+    .text2 h3,
+    .text3 h3,
+    .text4 h3,
+    .text5 h3 {
+        font-size: 30px;
+    }
+
+    .text1 .grostext,
+    .text2 .grostext,
+    .text3 .grostext,
+    .text4 .grostext,
+    .text5 .grostext {
+        padding-top: 40px;
+        padding-bottom: 30px;
+        width: 100%;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .navbar2,
+    .navbar3 {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+    }
+
+    .navjordan {
+        display: none;
+    }
+
+    .hautdepage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        padding-top: 0px;
+    }
+
+    .hautdepage .jordanacceuil img {
+        width: 50%;
+    }
+
+    .videoprincipale {
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .videoprincipale .video1 {
+        display: none;
+    }
+
+    .videoprincipale .video2 {
+        display: block;
+    }
+
+    .tendancedumoment .tendanceresponsif,
+    .jordanwomen .jordanwomenresponsif,
+    .jordanmen .jordanmenresponsif,
+    .jordankids .jordankidsresponsif {
+        padding: 20px;
+        display: block;
+    }
+
+    .tendancedumoment .tendanceimg,
+    .jordanwomen .jordanwomenimg,
+    .jordanmen .jordanmenimg,
+    .jordankids .jordankidsimg {
+        padding: 20px;
+        display: none;
+    }
+
+    .plusdarticlejordan h3 {
+        font-weight: bolder;
+        padding-left: 20px;
+        font-size: 30px;
+    }
+
+    .basdepage {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .basdepage .jordanbasketball a img,
+    .basdepage .airjordancollection a img {
+        width: 100%;
+    }
+
+    .tendancedumoment h2,
+    .jordanwomen h2,
+    .jordanmen h2,
+    .jordankids h2 {
+        font-weight: bold;
+        padding-left: 20px;
+    }
+
+    .containertext {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+
+    .conttext {
+        display: flex;
+        text-align: justify;
+        justify-content: left;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 50px;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+
+    .containerautre {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conteneurprixgeneral {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteneurimg {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+    }
+
+    .star {
+        font-size: 30px;
+        color: gold;
+    }
+
+    .rating {
+        padding: 10px;
+    }
+
+    .conteneurprix {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .prixxx {
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    .chaussure {
+        font-size: 4em;
+        font-weight: bold;
+    }
+
+    .description {
+        font-size: 1.3em;
+        padding-bottom: 20px;
+    }
+
+    .slider-container {
+        width: 90%;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .sliderdiv {
+        margin-top: 600px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider {
+        display: flex;
+        animation: slide 8s linear infinite;
+    }
+
+    .slider img {
+        width: 100%;
+        height: auto;
+    }
+
+    .paniergeneral {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .infopanier {
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .prixpanier {
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding-top: 150px;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .tendancedumoment .tendanceresponsif,
+    .jordanwomen .jordanwomenresponsif,
+    .jordanmen .jordanmenresponsif,
+    .jordankids .jordankidsresponsif {
+        padding: 40px;
+        display: none;
+    }
+
+    .tendancedumoment .tendanceimg,
+    .jordanwomen .jordanwomenimg,
+    .jordanmen .jordanmenimg,
+    .jordankids .jordankidsimg {
+        padding: 40px;
+        display: block;
+    }
+
+}

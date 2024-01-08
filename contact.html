@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contactez-nous. Nike FR</title>
+</head>
+
+<body class="contact">
+    <header>
+        <nav class="navbarnouv">
+            <div class="navbar1">
+                <a href="index.html"><img src="photocategorie/logonikehome.jpg" alt="Logo de Nike" width="60px"
+                        height="60px"></a>
+            </div>
+            <div class="navbar2">
+                <a href="nouveaute.html">Nos recommandations</a>
+                <a href="homme.html">Homme</a>
+                <a href="femme.html">Femme</a>
+                <a href="enfant.html">Enfant</a>
+                <a href="offres.html">Offres</a>
+            </div>
+            <div class="navbar3">
+                <input type="text" id="search-input" placeholder="Rechercher...">
+                <a href="panier.html"><img src="photocategorie/panier.png" alt="Mon panier" width="24px"
+                        height="24px"></a>
+            </div>
+            <div class="burger">
+                <a href="#" id="burger-button">
+                    <div class="bar bun-top"></div>
+                    <div class="bar lettuce"></div>
+                    <div class="bar mustard"></div>
+                    <div class="bar ketchup"></div>
+                    <div class="bar patty"></div>
+                    <div class="bar bun-bot"></div>
+                </a>
+                <div id="menu-dropdown" class="menu-dropdown">
+                    <a href="nouveaute.html">Nouveautés</a>
+                    <a href="homme.html">Homme</a>
+                    <a href="femme.html">Femme</a>
+                    <a href="enfant.html">Enfant</a>
+                    <a href="offres.html">Offres</a>
+                </div>
+            </div>
+            <script src="javaburger.js"></script>
+            <script src="javarecherche.js"></script>
+        </nav>
+    </header>
+    <div class="form">
+        <form action="https://formspree.io/f/xpzgbpno" method="POST">
+            <h1>Contactez-nous</h1>
+            <div class="separation"></div>
+            <div class="corps-formulaire">
+                <div class="gauche">
+                    <div class="groupe">
+                        <label>Votre Prénom</label>
+                        <input type="name" autocomplete="on" />
+                    </div>
+                    <div class="groupe">
+                        <label>Votre adresse e-mail</label>
+                        <input type="name" name="email" autocomplete="off" />
+                    </div>
+                    <div class="groupe">
+                        <label>Votre téléphone</label>
+                        <input type="name" autocomplete="off" />
+                    </div>
+                </div>
+
+                <div class="droite">
+                    <div class="groupe">
+                        <label>Message</label>
+                        <textarea placeholder="Saisissez ici..." name="name"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pied-formulaire" align="center">
+                <button type="submit">Envoyer le message</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="photocategorie/minilogonike.png" type="image/x-icon">
+    <title>Mon Panier. NikeFR</title>
+</head>
+<body>
+    <header>
+        <nav class="navbarnouv">
+            <div class="navbar1">
+                <a href="index.html"><img src="photocategorie/logonikehome.jpg" alt="Logo de Nike" width="60px" height="60px"></a>
+            </div>
+            <div class="navbar2">
+                <a href="nouveaute.html">Nos recommandations</a>
+                <a href="homme.html">Homme</a>
+                <a href="femme.html">Femme</a>
+                <a href="enfant.html">Enfant</a>
+                <a href="offres.html">Offres</a>
+            </div>
+            <div class="navbar3">
+                <input type="text" id="search-input" placeholder="Rechercher...">
+                <a href="panier.html"><img src="photocategorie/panier.png" alt="Mon panier" width="24px" height="24px"></a>
+            </div>
+            <div class="burger">
+                <a href="#" id="burger-button">
+                    <div class="bar bun-top"></div>
+                    <div class="bar lettuce"></div>
+                    <div class="bar mustard"></div>
+                    <div class="bar ketchup"></div>
+                    <div class="bar patty"></div>
+                    <div class="bar bun-bot"></div>
+                </a>
+                <div id="menu-dropdown" class="menu-dropdown">
+                    <a href="nouveaute.html">Nouveautés</a>
+                    <a href="homme.html">Homme</a>
+                    <a href="femme.html">Femme</a>
+                    <a href="enfant.html">Enfant</a>
+                    <a href="offres.html">Offres</a>
+                </div>
+            </div>
+            <script src="javaburger.js"></script>
+            <script src="javarecherche.js"></script>
+
+        </nav>
+    </header>
+    <div class="paniergeneral">
+        <div class="infopanier">
+            <p>Panier</p><br>
+            <div class="ligne"></div><br>
+            <ul>
+                <li>Article 1</li>
+                <li>Article 2 </li>
+                <li>Article 3</li>
+                <li>Article 4</li>
+                <li>Article 5</li>
+                <li>Article 6</li>
+            </ul><br>
+            <p><i>Ce panier n'est actuellement pas utilisation etant donné qu'il faudrait du java-script ou je ne sais quel language. J'ai pensé a le faire en python, (if acheter, panier+= article), un truc comme ca mais je ne sais pas comment l'integrer.</i></p>
+        </div>
+        <div class="prixpanier">
+            <div class="prixborder">
+                <p>Sous-total HT :</p>
+                <p>Total TTC :</p>
+                <button>Paiement</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
